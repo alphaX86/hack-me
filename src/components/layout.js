@@ -6,19 +6,22 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
+import PropTypes from "prop-types"
 import Footer from "./footer"
-import { Row, Col } from "react-bootstrap"
+import Helmet from "react-helmet"
 import { createGlobalStyle } from "styled-components"
+import Navbar from "./navbar"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 
+library.add(fab)
 const GlobalStyle = createGlobalStyle`
  @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
   * {
     margin: 0;
     padding: 0;
-    font-family: "Balsamiq Sans";
+    font-family: 'Balsamiq Sans';
     font-size: 400;
   }
 `
@@ -36,7 +39,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: "description", content: "Virtual pharmacy" },
+          { name: "keywords", content: "medicine, telemedicine" },
+        ]}
+      >
+        <html lang="en" />
+      </Helmet>
 
       <main>{children}</main>
       <Footer />

@@ -3,17 +3,21 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
+import { Container, Row, Col, Button } from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Image />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <Image />
+
+          <Button>Sign Up</Button>
+        </Col>
+      </Row>
+    </Container>
   </Layout>
 )
 
