@@ -1,42 +1,51 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#440047`,
-      marginBottom: `0`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const StyledNavbar = styled.div`
+  .navbar {
+    background-color: #440047 !important;
+    height: 4rem;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #df1;
+    text-decoration: none;
+  }
+`
+const Header = () => (
+  <StyledNavbar>
+    <Navbar expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand>
+        <Link to="/">VirtuPharm</Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link>
+            <Link to="/">Home</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/about">About</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/contact">Contact</Link>
+          </Nav.Link>
+        </Nav>
+        <Nav className="ml-auto mr-3">
+          <Link to="/register">Register/Login</Link>
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-info">Search</Button>
+        </Form>
+      </Navbar.Collapse>
+    </Navbar>
+  </StyledNavbar>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

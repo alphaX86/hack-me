@@ -9,15 +9,12 @@ import "bootstrap/dist/css/bootstrap.min.css"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Container>
-      <Row>
-        <Col xs={12}>
-          <Image />
 
-          <Button>Sign Up</Button>
-        </Col>
-      </Row>
-    </Container>
+    <Row>
+      <Col xs={12}>
+        <Image />
+      </Col>
+    </Row>
   </Layout>
 )
 

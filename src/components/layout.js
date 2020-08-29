@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import Footer from "./footer"
 import Helmet from "react-helmet"
 import { createGlobalStyle } from "styled-components"
-import Navbar from "./navbar"
+import Header from "./header"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 
@@ -49,7 +49,10 @@ const Layout = ({ children }) => {
         <html lang="en" />
       </Helmet>
 
-      <main>{children}</main>
+      <main>
+        <Header />
+        {children}
+      </main>
       <Footer />
     </>
   )
