@@ -40,10 +40,7 @@ const Login = () => (
                <input type="submit" value="Login" />
             </form>
         </div>
-        <Footer>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        </div>
-        </Footer>
+        <Footer />
     </Layout>
 )
 

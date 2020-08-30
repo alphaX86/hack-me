@@ -41,11 +41,7 @@ const Products = () => (
             </div>
         </div>
         </Body>
-        <Footer>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        </div>
-        </Footer>
-    </Layout>
+        <Footer />
 )
 
 export default Products

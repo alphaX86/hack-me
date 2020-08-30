@@ -43,10 +43,7 @@ const HomePage = () => (
             </div>
         </div>
         </Body>
-        <Footer>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        </div>
-        </Footer>
+        <Footer />
     </Layout>
 )
 
