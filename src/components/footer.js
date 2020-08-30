@@ -56,9 +56,7 @@ const Footer = () => (
         <Col xs={12} sm={6} md={4}>
           <h3>About Us</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            saepe commodi aut natus. Facere assumenda ea quibusdam adipisci
-            deleniti.
+            We are a team who knows that medication is important for loved ones.
           </p>
           <p className="text-center">&copy; {new Date().getFullYear()}</p>
         </Col>
