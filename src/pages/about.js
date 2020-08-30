@@ -28,7 +28,7 @@ const About = () => {
           <Col xs={12} sm={6} className="pt-5">
             <h1>About</h1>
             <p>
-              We are a group of people who thinks that medication is important for people and even loved ones.
+              We, VirtuPharm, are a group of people who thinks that medication is important for people and even loved ones.
               We make products which connects customers and dealers to get their medicines on time. 
               Still confused? Try our site and order your medicines to get right on your doorstep!
             </p>

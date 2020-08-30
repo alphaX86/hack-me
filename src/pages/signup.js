@@ -11,17 +11,6 @@ import Footer from "../components/footer"
 const SignUp = () => (
     <Layout>
         <SEO title="SignUp" />
-        <Header>
-            <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-            Title 
-            </div>
-            <div style={{maxWidth: `200px`, marginBottom: `1.45rem`}}>
-            <Link to="/prod/">Products</Link>
-            <Link to="/cat/">Categories</Link>
-            <Link to="/login/">Login</Link>
-            <Link to="/signup/">SignUp</Link>
-            </div>
-        </Header>
         <div className="Form"
         style={{maxWidth: `200px`, marginBottom: `1.45rem`}}>
             <h1 style={{alignContent: `center`}}>
@@ -56,10 +45,6 @@ const SignUp = () => (
             <input type="submit" value="Submit" />
             </form>
         </div>
-        <Footer>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        </div>
-        </Footer>
     </Layout>
 )
 

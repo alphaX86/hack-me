@@ -51,14 +51,17 @@ const Footer = () => (
             <li>
               <FooterLink to="/contact">Contact</FooterLink>
             </li>
+            <li>
+              <FooterLink to="/prod">Products</FooterLink>
+            </li>
           </ul>
         </Col>
         <Col xs={12} sm={6} md={4}>
           <h3>About Us</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            saepe commodi aut natus. Facere assumenda ea quibusdam adipisci
-            deleniti.
+          We are a group of people who thinks that medication is important for people and even loved ones.
+          We make products which connects customers and dealers to get their medicines on time. 
+          Still confused? Try our site and order your medicines to get right on your doorstep!
           </p>
           <p className="text-center">&copy; {new Date().getFullYear()}</p>
         </Col>
