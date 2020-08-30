@@ -10,5 +10,9 @@
 
 
 ## Programming Languages/Libraries Needed
+* HTML/CSS
+* JavaScript
+    * React, Gatsbyjs
+* React Bootstrap
 
 
