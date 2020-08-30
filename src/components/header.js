@@ -4,9 +4,16 @@ import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap"
 import styled from "styled-components"
 
 const StyledNavbar = styled.div`
+  position: relative;
+  z-index: 1;
   .navbar {
     background-color: #440047 !important;
     height: 4rem;
+  }
+  .navbar-collapse {
+    background-color: #440047 !important;
+    padding-left: 10px;
+    padding-right: 1px;
   }
   a {
     color: #fff;

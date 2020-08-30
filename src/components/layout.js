@@ -17,12 +17,16 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 
 library.add(fab)
 const GlobalStyle = createGlobalStyle`
- @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
   * {
     margin: 0;
     padding: 0;
-    font-family: 'Balsamiq Sans';
+    font-family: 'Montserrat';
     font-size: 400;
+  }
+  main {
+    min-height: 400px;
+    padding-bottom: 20px;
   }
 `
 const Layout = ({ children }) => {
@@ -48,11 +52,8 @@ const Layout = ({ children }) => {
       >
         <html lang="en" />
       </Helmet>
-
-      <main>
-        <Header />
-        {children}
-      </main>
+      <Header />
+      <main>{children}</main>
       <Footer />
     </>
   )
