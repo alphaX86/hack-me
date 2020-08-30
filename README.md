@@ -7,12 +7,16 @@
 
 
 ## Frameworks Used
+* Gatsby
+* ReactJS
 
 
 ## Programming Languages/Libraries Needed
 * HTML/CSS
 * JavaScript
-    * React, Gatsbyjs
+    * React, GatsbyJS, npm, yarn
+* JSX
+* Node.JS
 * React Bootstrap
 
 
