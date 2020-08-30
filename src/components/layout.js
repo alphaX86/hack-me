@@ -17,11 +17,13 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 
 library.add(fab)
 const GlobalStyle = createGlobalStyle`
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
   * {
     margin: 0;
-    font-family: Montserrat, "Open Sans";    
+    padding: 0;    
+  }
+  body {
+    font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
   }
   main {
     min-height: 400px;
