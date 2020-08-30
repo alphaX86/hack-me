@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -24,7 +25,7 @@ const Login = () => (
                    Password:
                    <input type="password" name="pass" required />
                </label>
-               <input type="submit" value="Login" />
+               <Link to="/"><Button variant="success" size="lg">Login</Button></Link>
             </form>
         </div>
     </Layout>

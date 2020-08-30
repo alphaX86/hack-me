@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-
-import Header from "../components/header"
-import Footer from "../components/footer"
 
 const SignUp = () => (
     <Layout>
@@ -42,7 +40,7 @@ const SignUp = () => (
                 Password:
             <input type="password" name="pass" required />
             </label>
-            <input type="submit" value="Submit" />
+           <Link to="/success"><Button variant="success" size="lg">SignUp</Button></Link>
             </form>
         </div>
     </Layout>
