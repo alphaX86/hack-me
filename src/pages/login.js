@@ -1,29 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Container, Row, Col, Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import Header from "../components/header"
-import Footer from "../components/footer"
 
 const Login = () => (
     <Layout>
         <SEO title="Login" />
-        <Header>
-            <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-            Title 
-            </div>
-            <div style={{maxWidth: `200px`, marginBottom: `1.45rem`}}>
-            <Link to="/prod/">Products</Link>
-            <Link to="/cat/">Categories</Link>
-            <Link to="/login/">Login</Link>
-            <Link to="/signup/">SignUp</Link>
-            </div>
-        </Header>
-        <div className="Form"
-        style={{maxWidth: `200px`, marginBottom: `1.45rem`}}>
+        <Container>
+        <Row>
+          <Col className="col-xs-12, col-sm-6 m-auto">
             <h1 style={{alignContent: `center`}}>
                 Login
             </h1>
@@ -37,13 +26,11 @@ const Login = () => (
                    Password:
                    <input type="password" name="pass" required />
                </label>
-               <input type="submit" value="Login" />
+               <Link to="/"><Button variant="success" size="lg">Login</Button></Link>
             </form>
-        </div>
-        <Footer>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        </div>
-        </Footer>
+            </Col>
+        </Row>
+    </Container>
     </Layout>
 )
 
