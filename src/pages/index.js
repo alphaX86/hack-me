@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -17,8 +18,19 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/home/">Go to Site!</Link> <br />
-    <Link to="/login/">Login</Link>
+    <Link to="/home/"><div className="mb-2">
+      <Button variant="primary" size="lg">
+        Go to site!
+      </Button>{' '}
+  </div>
+  </Link> <br />
+    <Link to="/login/">
+      <div className="mb-2">
+    <Button variant="secondary" size="lg">
+      Login!
+    </Button>
+  </div>
+  </Link>
     </Header>
   </Layout>
 )
