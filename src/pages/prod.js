@@ -1,11 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Button } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const About = () => {
+import { Link } from "gatsby"
+
+const Products = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
@@ -42,8 +44,56 @@ const About = () => {
           </Col>
         </Row>
       </Container>
+      <p>Fill this form below to get your medicines requested....</p>
+      <form>
+        <label>
+          Name: <br />
+          <input type="text" name="name" required/>
+        </label> <br />
+        <label>
+          Age: <br />
+          <input type="text" name="age" required/>
+        </label> <br />
+        <label>
+          City: <br />
+          <input type="text" name="city" required/>
+        </label> <br />
+        <label>
+          Country: <br />
+          <input type="text" name="cou" required/>
+        </label> <br />
+        <label>
+          Medicine Name: <br />
+          <input type="text" name="med_name" required/>
+        </label> <br />
+        <label>
+          Serial No (If any): <br />
+          <input type="text" name="serial" required/>
+        </label> <br />
+        <label>
+          Manufacturer Name: <br />
+          <input type="text" name="manu_name" required/>
+        </label> <br />
+        <label>
+          Quantity: (Limited to 5 per order | 3 for class-H drugs) <br />
+          <input type="number" name="quantity" required/>
+        </label> <br />
+        <label>
+          Is it class H drug? <br />
+          <input type="radio" name="classH" value="yes" required/> Yes
+          <input type="radio" name="classH" value="no" required/> No
+        </label> <br />
+        <label>
+          Delivery Date? (Estimated) <br />
+          <input type="date" name="date" required/>
+        </label>
+        <p>Please check this agreement below and then continue!</p>
+        <p>I, understand and agree that I'm using VirtuPharm for delivery purposes and requesting medicines with detailed medical prescription.</p>
+        <p>WARNING: VirtuPharm isn't responsible for damage of products!</p>
+        <Link to="/confirm"><Button variant="danger" size="lg">Confirm and place order</Button></Link>
+      </form>
     </Layout>
   )
 }
 
-export default About
+export default Products
