@@ -33,7 +33,7 @@ const Confirm = () => {
               VirtuPharm is has placed your requested order successfully!
             </p>
             <p>
-                To order more medicines, go to the form and fill again! Thank you for your order! :)
+                To order more medicines, go to the form and fill again! Thank you for your order!
             </p>
             <p>
                 P.S: We need a doctor's prescription in order to receive your medicines at the time of your delivery for confirmation!

@@ -44,6 +44,10 @@ const Products = () => {
           </Col>
         </Row>
       </Container>
+      <Container>
+        <Row>
+          <Col className="col-xs-12, col-sm-6 m-auto">
+            <br />
       <p>Fill this form below to get your medicines requested....</p>
       <form>
         <label>
@@ -92,6 +96,9 @@ const Products = () => {
         <p>WARNING: VirtuPharm isn't responsible for damage of products!</p>
         <Link to="/confirm"><Button variant="danger" size="lg">Confirm and place order</Button></Link>
       </form>
+      </Col>
+      </Row>
+      </Container>
     </Layout>
   )
 }
