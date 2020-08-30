@@ -28,7 +28,7 @@ const IndexPage = () => (
       <div className="mb-2">
     <Button variant="secondary" size="lg">
       Login!
-    </Button>
+    </Button>{' '}
   </div>
   </Link>
     </Header>
