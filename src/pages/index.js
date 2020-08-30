@@ -12,7 +12,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Header>
     <h1>Title</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <p>Welcome to title</p>
     <p>Your wanted medicines and life-saving medicines at your doorstep!</p>
     <p>All branded company products available with nominal price</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
