@@ -28,10 +28,9 @@ const About = () => {
           <Col xs={12} sm={6} className="pt-5">
             <h1>About</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut
-              recusandae voluptatem rerum. Placeat natus sed cupiditate
-              deserunt. Minus enim, eaque impedit officiis eum odit ipsa
-              sapiente blanditiis obcaecati quis?
+              We are a group of people who thinks that medication is important for people and even loved ones.
+              We make products which connects customers and dealers to get their medicines on time. 
+              Still confused? Try our site and order your medicines to get right on your doorstep!
             </p>
           </Col>
           <Col xs={12} sm={6} className="pt-5">
