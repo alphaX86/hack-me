@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
-import { Container, Row, Col, Button } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const IndexPage = () => (
