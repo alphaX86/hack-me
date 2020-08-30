@@ -6,12 +6,25 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+import Footer from "./footer"
+import Helmet from "react-helmet"
+import { createGlobalStyle } from "styled-components"
+import Navbar from "./navbar"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 
-import Header from "./header"
-import "./layout.css"
-
+library.add(fab)
+const GlobalStyle = createGlobalStyle`
+ @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Balsamiq Sans';
+    font-size: 400;
+  }
+`
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -25,21 +38,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+      <GlobalStyle />
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: "description", content: "Virtual pharmacy" },
+          { name: "keywords", content: "medicine, telemedicine" },
+        ]}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+        <html lang="en" />
+      </Helmet>
+
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

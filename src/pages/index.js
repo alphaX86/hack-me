@@ -1,5 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Image from "../components/image"
+import { Container, Row, Col, Button } from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 import { Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
@@ -9,6 +14,15 @@ import Header from "../components/header"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <Image />
+
+          <Button>Sign Up</Button>
+        </Col>
+      </Row>
+    </Container>
     <Header>
     <h1>Title</h1>
     <p>Welcome to title</p>

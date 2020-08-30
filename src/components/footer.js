@@ -1,47 +1,94 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+const Wrapper = styled.footer`
+  background: #440047;
+  min-height: 200px;
+  max-width: 100vw;
+  color: #fff;
+  padding-top: 10px;
+  li {
+    list-style: none;
+  }
 
-const Footer = ({siteTitle}) => (
-    <footer
-        style={{
-            background: `#440047`,
-            marginBottom: `1.5rem`,
-        }}
-    >
-        <div
-            style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `1.45rem 1.0700rem`,    
-            }}   
-        >
-            <h1 style={{ margin: 0 }}>
-            <Link
-                to="/"
-                style={{
-                    color: `white`,
-                    textDecoration: `none`,
-                }}
-        >
-            {siteTitle}
-                    </Link>
-                </h1>
-            </div> 
-    </footer>
+  #facebook:hover {
+    color: #3b5998;
+  }
+  #instagram:hover {
+    color: #3f729b;
+  }
+  #twitter:hover {
+    color: #00acee;
+  }
+  a {
+    color: #fff;
+  }
+`
+const FooterLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #df1;
+    text-decoration: none;
+  }
+`
+const Footer = () => (
+  <Wrapper>
+    <Container>
+      <Row>
+        <Col xs={12} sm={6} md={4}>
+          <h3>Links</h3>
+          <ul>
+            <li>
+              <FooterLink to="/">Home</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/about">About</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/contact">Contact</FooterLink>
+            </li>
+          </ul>
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            saepe commodi aut natus. Facere assumenda ea quibusdam adipisci
+            deleniti.
+          </p>
+          <p className="text-center">&copy; {new Date().getFullYear()}</p>
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <h3>Social Media</h3>
+          <a
+            href="https//:facebook.com/virtupharm"
+            className="mr-5"
+            id="facebook"
+          >
+            <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+          </a>
+          <a
+            href="https//:instagram.com/virtupharm"
+            className="mr-5"
+            id="instagram"
+          >
+            <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
+          </a>
+          <a
+            href="https//:twitter.com/virtupharm"
+            className="mr-5"
+            id="twitter"
+          >
+            <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
+          </a>
+        </Col>
+      </Row>
+    </Container>
+  </Wrapper>
 )
 
-Footer.propTypes = {
-    siteTitle: PropTypes.string,
-}
-
-Footer.defaultProps = {
-    siteTitle: ``,
-  }
-  
 export default Footer
-  
