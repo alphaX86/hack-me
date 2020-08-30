@@ -1,0 +1,3 @@
+[submodule "lib/hack-me"]
+	path = lib/hack-me
+	url = git://github.com/alphaX86/hack-me.git
