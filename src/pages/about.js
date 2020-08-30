@@ -25,7 +25,7 @@ const About = () => {
       <SEO title="About us" />
       <Container>
         <Row>
-          <Col xs={12} sm={8}>
+          <Col xs={12} sm={6} className="pt-5">
             <h1>About</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut
@@ -34,7 +34,7 @@ const About = () => {
               sapiente blanditiis obcaecati quis?
             </p>
           </Col>
-          <Col xs={12} sm={4}>
+          <Col xs={12} sm={6} className="pt-5">
             <Img fluid={data.placeholderImage.childImageSharp.fluid} />
           </Col>
         </Row>
