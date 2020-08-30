@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Header from "../components/header"
 
@@ -16,7 +15,7 @@ const IndexPage = () => (
     <p>Your wanted medicines and life-saving medicines at your doorstep!</p>
     <p>All branded company products available with nominal price</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      
     </div>
     <Link to="/home/"><div className="mb-2">
       <Button variant="primary" size="lg">
