@@ -1,4 +1,4 @@
-# Hack ME
+# VirtuPharm
 
 ## Objective
 The objective of the Hack ME team is to develop a functional website that allows users to view and search through nearby available medication and have it orders to be ready for pick up or delivery.
