@@ -26,6 +26,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm ci
+    - run: npm install -i gatsby-cli
+    - run: npm install react react-dom react-bootstrap
+    - run: npm install -i @fortawesome/free-brands-svg-icons
+    - run: npm install -i @fortawesome/react-fontawesome
     - run: gatsby develop --if-present
     - run: gatsby build
     - run: npm test
